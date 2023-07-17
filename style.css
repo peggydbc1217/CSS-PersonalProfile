@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Castoro&family=Rubik:wght@500;600;700&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Path: style.css */
+body {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.nav {
+  background-color: black;
+  padding: 40px 312px 0 312px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  gap: 61px;
+}
+
+.nav__listItem {
+  list-style: none;
+  line-height: 24px;
+  width: 306px;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  text-decoration: none;
+  color: #d1d1d1;
+}
+
+.nav__link:hover,
+.nav__link:active {
+  color: #ffffff;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: black;
+  padding: 72px 312px;
+}
+
+.header__image {
+  display: inline-block;
+  animation-name: moveInRight;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+.header__title-container {
+  height: 528px;
+
+  margin-top: 232px;
+  margin-left: 24px;
+}
+
+.header__title {
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-fill-mode: ease-in;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 64px;
+  line-height: 96px;
+}
+
+.header__title-name {
+  color: #00ffa3;
+  font-size: 128px;
+  line-height: 192px;
+  text-align: right;
+  animation-name: moveInRight;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+.header__btn-container {
+  text-align: right;
+}
+
+.header__btn,
+.header__btn:link,
+.header__btn:visited {
+  display: inline-block;
+  line-height: 24px;
+  text-decoration: none;
+  border-radius: 32px;
+  padding: 11.2px 21.7px 11.2px 21.7px;
+  background-color: #ffffff;
+  color: black;
+  transition: all 0.2s;
+  animation: moveInBottom 0.5s ease-out 2s;
+  animation-fill-mode: backwards;
+}
+
+.header__btn:hover {
+  background-color: #00ffa3;
+  color: #ffffff;
+  transform: translateY(-10px);
+}
+
+.header__btn:active,
+.header__btn:focus {
+  outline: none;
+  transform: translateY(-15px);
+}
+
+.header__arrow {
+  display: inline-block;
+  vertical-align: center;
+}
+
+/* INTRODUCTION */
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 160px 312px 160px 312px;
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/background-img.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.intro__left {
+  width: 526px;
+}
+
+.mb-36 {
+  margin-bottom: 36px;
+}
+
+.paragraph {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.intro__paragraph {
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+.intro__left-images {
+  display: flex;
+  gap: 16px;
+}
+
+.intro__right {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.intro__right-img {
+  display: block;
+}
+
+/* ABOUT ME */
+
+.about-me {
+  background-color: #ffffff;
+  padding: 160px 312px 160px 312px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 134px;
+}
+
+.card {
+  max-width: 636px;
+}
+
+.card__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card__listItem {
+  color: #15161d;
+  padding: 16px;
+  width: 43.1%;
+}
+
+.card__h4 {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 4px;
+}
+
+.card__paragraph {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.about-me__title {
+  max-width: 526px;
+}
+
+/* CONTACT ME */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 113px;
+  align-items: center;
+
+  padding: 96px 312px 96px 312px;
+  background-image: linear-gradient(to right, #050014, #01021e);
+}
+
+.contact__card {
+  display: flex;
+  justify-content: space-between;
+  max-width: 657px;
+}
+
+.contact__card:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.2);
+}
+
+.contact__card-title {
+  letter-spacing: 9.5px;
+}
+
+.contact__card-title:hover {
+  color: #00ffa3;
+}
+
+.contact__card-img {
+  display: block;
+}
+
+.contact__social-icon {
+  max-width: 526px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact__social-icon--img {
+  /* display: block; */
+  height: 162px;
+  transition: all 0.2s;
+}
+
+.contact__social-icon--img:hover {
+  transform: scale(1.3);
+}
+
+/* MY PROJECT */
+
+.project {
+  padding: 160px 312px;
+}
+
+.project__title {
+  color: #000;
+  padding-left: 570px;
+}
+
+.project__content {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project__content__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.project__content__right__upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.project__content__right__upper-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 76px;
+  flex-direction: column;
+}
+
+.project__content__right__upper-main-p {
+  line-height: 24px;
+}
+
+.project__content__right__upper-main-link {
+  line-height: 24px;
+  background-color: #000;
+  color: #fff;
+  padding: 11px 24px;
+  border-radius: 32px;
+  margin-right: 4px;
+  transition: all 0.3s;
+}
+
+.project__content__right__upper-main-link:hover {
+  background-color: #00ffa3;
+  color: #000;
+  transform: translateY(-5px);
+}
+
+.project__content__right__bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #000;
+}
+
+.footer__h5 {
+  text-align: center;
+  color: #fff;
+  line-height: 24px;
+  padding: 40px 0;
+}
+
+.footer__h5:hover {
+  color: #00ffa3;
+}
