@@ -384,6 +384,10 @@ body {
   max-width: 526px;
 }
 
+.about-me__h2 {
+  color: #000;
+}
+
 /* CONTACT ME */
 
 .contact {
